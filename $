@@ -1,0 +1,22 @@
+
+'use strict';
+
+/////////////////
+//  variables  //
+/////////////////
+
+let button = document.getElementsByClassName("button")[0];
+let inputValue = document.getElementById('add-item').value;
+let ul = document.getElementsByClassName('TODO-list');
+
+
+/////////////////
+//  functions  //
+/////////////////
+
+alert(inputValue);
+button.onclick = function() {
+  ul.append(inputValue);
+  alert("oui");
+};
+
