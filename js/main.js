@@ -22,12 +22,6 @@ function getInputValue() {
   inputValue = input.value;
 }
 
-function checkInputEmptyValue() {
-  if (inputValue == '') {
-    return;
-  }
-}
-
 function addLiInList() {
   if (inputValue != '') {
     ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${inputValue[0].toUpperCase() + inputValue.slice(1)}</span></li>`);
@@ -56,7 +50,6 @@ function removeItem() {
 
 button.onclick = function() {
   getInputValue();
-  checkInputEmptyValue();
   addLiInList();
   crossedLi();
   removeItem();
@@ -65,7 +58,6 @@ button.onclick = function() {
 input.onkeypress = function(event) {
   getInputValue();
   if (event.which == 13 || event.keyCode == 13) {
-    checkInputEmptyValue();
     addLiInList();
     crossedLi();
     removeItem();
