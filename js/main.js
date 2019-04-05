@@ -23,7 +23,7 @@ function addLiInList() {
   if (inputValue != '') {
     let ul = document.getElementsByClassName('TODO-list')[0];
 
-    ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${inputValue[0].toUpperCase() + inputValue.slice(1)}</span></li>`);
+    ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${inputValue[0].toUpperCase() + inputValue.slice(1)}</span><input type="number" value="1" class="form__input-number"</li>`);
     input.value = '';
   }
 }
