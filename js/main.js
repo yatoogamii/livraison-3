@@ -19,12 +19,6 @@ function getInputValue() {
   inputValue = input.value;
 }
 
-function checkInputEmptyValue() {
-  if (inputValue == '') {
-    return;
-  }
-}
-
 function addLiInList() {
   if (inputValue != '') {
     let ul = document.getElementsByClassName('TODO-list')[0];
@@ -73,7 +67,6 @@ function removeItem() {
 
 button.onclick = function() {
   getInputValue();
-  checkInputEmptyValue();
   addLiInList();
   crossedLi();
   removeItem();
@@ -83,7 +76,6 @@ button.onclick = function() {
 input.onkeypress = function(event) {
   getInputValue();
   if (event.which == 13 || event.keyCode == 13) {
-    checkInputEmptyValue();
     addLiInList();
     crossedLi();
     removeItem();
