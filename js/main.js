@@ -33,7 +33,7 @@ function addLiInList() {
 }
 
 function valueCapitalize() {
-  return inputValue[0].toUpperCase() + inputValue.slice(1)
+  return inputValue[0].toUpperCase() + inputValue.slice(1).toLowerCase();
 }
 
 function crossedLi() {
