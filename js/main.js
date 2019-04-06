@@ -9,6 +9,7 @@ let button = document.getElementsByClassName("button")[0];
 let input = document.getElementById('add-item');
 let ul = document.getElementsByClassName('TODO-list')[0];
 let inputValue = '';
+let spans;
 
 /////////////////
 //  functions  //
@@ -20,14 +21,23 @@ function getInputValue() {
 
 function addLiInList() {
   if (inputValue != '') {
-
-    ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${inputValue[0].toUpperCase() + inputValue.slice(1)}</span><input type="number" value="1" class="form__input-number"</li>`);
-    input.value = '';
+    if (checkIfItemAlreadyExist()) {
+      input.value = '';
+    }
+    else {
+      ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${valueCapitalize()}</span><input type="number" value="1" class="form__input-number"</li>`);
+      input.value = '';
+      ulScrollAuto();
+    }
   }
 }
 
+function valueCapitalize() {
+  return inputValue[0].toUpperCase() + inputValue.slice(1)
+}
+
 function crossedLi() {
-  let spans = document.getElementsByTagName("span");
+  spans = document.getElementsByTagName("span");
   for (let span of spans) {
     span.onclick = function() {
       span.classList.toggle('crossed')
@@ -48,6 +58,15 @@ function ulScrollAuto() {
   ul.scrollTop = ul.scrollHeight;
 }
 
+function checkIfItemAlreadyExist() {
+  spans = document.getElementsByTagName("span");
+  let arrSpans = [];
+  for (let i = 0; i < spans.length; i++) {
+    arrSpans.push(spans[i].innerHTML);
+  }
+  return (arrSpans.includes(valueCapitalize())) ? true : false;
+}
+
 /////////////
 //  Event  //
 /////////////
@@ -57,7 +76,6 @@ button.onclick = function() {
   addLiInList();
   crossedLi();
   removeItem();
-  ulScrollAuto();
 };
 
 input.onkeypress = function(event) {
@@ -66,7 +84,6 @@ input.onkeypress = function(event) {
     addLiInList();
     crossedLi();
     removeItem();
-    ulScrollAuto();
   }
   return;
 }
