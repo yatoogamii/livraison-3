@@ -11,6 +11,17 @@
   box-sizing: border-box;
 }
 
+
+////////////////////////////////////////////////////////////////////////
+//                             variables                              //
+////////////////////////////////////////////////////////////////////////
+
+$black-color: #454545;
+$white-color: #fff8f0;
+$dark-blue-color: #2e3b4a;
+$blue-color: #3b4c5f;
+$light-blue-color: #485c73;
+
 ////////////////////////////////////////////////////////////////////////
 //                                base                                //
 ////////////////////////////////////////////////////////////////////////
@@ -20,17 +31,20 @@ html {
   width: 100%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
+  color: $black-color;
 }
 
 h1 {
   text-align: center;
   font-size: 4rem;
+  color: $white-color;
 }
 
 h2 {
   font-size: 3rem;
   text-align: center;
   width: 100%;
+  padding: 1rem 0 1rem 0;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -41,22 +55,38 @@ h2 {
 body {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background-color: $white-color;
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   height: 8vh;
   min-height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightblue;
+  background-color: $light-blue-color;
 }
 
 main {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 2rem;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: $light-blue-color;
+  color: $white-color;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -92,6 +122,8 @@ main {
     font-size: 2rem;
     margin: 1rem;
     padding: 1rem;
+    color: $white-color;
+    background-color: $black-color;
   }
 
   button {
@@ -101,6 +133,8 @@ main {
     width: 10rem;
     font-size: 2rem;
     margin: 1rem;
+    color: $white-color;
+    background-color: $black-color;
   }
 }
 
@@ -150,3 +184,29 @@ ul {
   }
 }
 
+//////////////
+//  footer  //
+//////////////
+
+footer {
+  .fa-github-square {
+    font-size: 10rem;
+  }
+
+  .fa-twitter-square {
+    font-size: 10rem;
+    margin: 0 5rem 0 5rem;
+  }
+
+  .fa-linkedin {
+    font-size: 10rem;
+  }
+
+  .footer__p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    width: 100%;
+  }
+}
