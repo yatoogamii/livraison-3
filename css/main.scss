@@ -32,7 +32,6 @@ html {
   width: 100%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
-  color: $black-color;
 }
 
 h1 {
@@ -63,6 +62,7 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
   background-color: $white-color;
+  color: $black-color;
 }
 
 header {
@@ -123,12 +123,12 @@ footer {
       font-size: 2rem;
     }
   }
-  .button-dark-mode--off {
-    background-color: $button-bg-color;
-  }
-  .button-dark-mode--on {
-    background-color: $black-color;
-  }
+  // .button-dark-mode--off {
+  //   background-color: $button-bg-color;
+  // }
+  // .button-dark-mode--on {
+  //   background-color: $black-color;
+  // }
 }
 
 ////////////
@@ -254,4 +254,30 @@ ul {
     width: 100%;
   }
 
-  
+////////////////////////////////////////////////////////////////////////
+//                               color                                //
+////////////////////////////////////////////////////////////////////////
+
+.body--darkmode {
+  color: $white-color;
+  background-color: $black-color;
+}
+
+.header--darkmode {
+  background-color: $dark-blue-color;
+}
+
+.footer--darkmode {
+  background-color: $dark-blue-color;
+}
+
+.input--darkmode {
+  background-color: $white-color;
+  color: $dark-color;
+}
+
+.button--darkmode {
+  background-color: $white-color;
+  color: $dark-color;
+}
+
