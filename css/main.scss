@@ -218,6 +218,8 @@ ul {
       height: 4rem;
       font-size: 3rem;
       margin: 1rem;
+      background-color: $black-color;
+      color: $white-color;
     }
   }
 }
@@ -271,14 +273,14 @@ ul {
   background-color: $dark-blue-color;
 }
 
-form .input--darkmode {
-  background-color: $white-color;
-  color: $black-color;
+.input--darkmode {
+  background-color: $white-color !important;
+  color: $black-color !important;
 }
 
-form .button--darkmode {
-  background-color: $white-color;
-  color: $black-color;
+.button--darkmode {
+  background-color: $white-color !important;
+  color: $black-color !important;
 }
 
 ////////////////////////////////////////////////////////////////////////

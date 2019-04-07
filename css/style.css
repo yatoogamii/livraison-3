@@ -167,6 +167,8 @@ ul li input {
   height: 4rem;
   font-size: 3rem;
   margin: 1rem;
+  background-color: #454545;
+  color: #fff8f0;
 }
 
 a {
@@ -207,14 +209,14 @@ a .fa-linkedin {
   background-color: #2e3b4a;
 }
 
-form .input--darkmode {
-  background-color: #fff8f0;
-  color: #454545;
+.input--darkmode {
+  background-color: #fff8f0 !important;
+  color: #454545 !important;
 }
 
-form .button--darkmode {
-  background-color: #fff8f0;
-  color: #454545;
+.button--darkmode {
+  background-color: #fff8f0 !important;
+  color: #454545 !important;
 }
 
 @media screen and (max-width: 500px) {

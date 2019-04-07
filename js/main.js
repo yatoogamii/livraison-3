@@ -13,6 +13,7 @@ let header = document.getElementsByTagName('header')[0];
 let footer = document.getElementsByTagName('footer')[0];
 let divDarkModeOn = document.getElementsByClassName('button-dark-mode--on')[0];
 let divDarkModeOff = document.getElementsByClassName('button-dark-mode--off')[0];
+let count = "";
 let inputValue = '';
 let spans;
 
@@ -32,6 +33,7 @@ function addLiInList() {
     else {
       ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${valueCapitalize()}</span><input type="number" value="1" class="ul__input-number"</li>`);
       input.value = '';
+      count = document.getElementsByTagName('input')[1];
       ulScrollAuto();
     }
   }
@@ -110,6 +112,7 @@ divDarkModeOn.onclick = function () {
   footer.classList.add('footer--darkmode');
   input.classList.add('input--darkmode');
   button.classList.add('button--darkmode');
+  count.classList.add('input--darkmode');
 };
 
 divDarkModeOff.onclick = function() {
@@ -121,4 +124,5 @@ divDarkModeOff.onclick = function() {
   footer.classList.remove('footer--darkmode');
   input.classList.remove('input--darkmode');
   button.classList.remove('button--darkmode');
+  count.classList.remove('input--darkmode');
 };
