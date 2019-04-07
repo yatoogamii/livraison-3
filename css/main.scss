@@ -281,3 +281,84 @@ form .button--darkmode {
   color: $black-color;
 }
 
+////////////////////////////////////////////////////////////////////////
+//                           media queries                            //
+////////////////////////////////////////////////////////////////////////
+
+@media screen and (max-width: 500px) {
+
+  h1 {
+    font-size: 2.5rem;
+    left: 5%;
+    transform: none;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .form {
+    flex-wrap: wrap;
+    height: 20rem;
+    padding: 0;
+
+    label {
+      width: 100%;
+      justify-content: center;
+      position: relative;
+      bottom: 1rem
+    }
+
+    input {
+      width: 60%;
+      position: relative;
+      bottom: 3rem
+    }
+
+    button {
+      width: 20%;
+      position: relative;
+      bottom: 3rem
+    }
+  }
+
+  h2 {
+    position: relative;
+    bottom: 3rem;
+  }
+
+  ul {
+    position: relative;
+    bottom: 3rem;
+
+    li {
+      width: 100%;
+    }
+  }
+
+  footer {
+
+    a {
+
+      .fa-github-square {
+        font-size: 6rem;
+      }
+
+      .fa-twitter-square {
+        font-size: 6rem;
+      }
+
+      .fa-linkedin {
+        font-size: 6rem;
+      }
+    }
+
+    .footer__p {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+}
