@@ -88,6 +88,12 @@ footer {
 .header__button-dark-mode div p {
   font-size: 2rem;
 }
+.header__button-dark-mode .button-dark-mode--off {
+  background-color: #4c4c4c;
+}
+.header__button-dark-mode .button-dark-mode--on {
+  background-color: #454545;
+}
 
 .form {
   width: 100%;

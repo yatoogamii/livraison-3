@@ -123,12 +123,12 @@ footer {
       font-size: 2rem;
     }
   }
-  // .button-dark-mode--off {
-  //   background-color: $button-bg-color;
-  // }
-  // .button-dark-mode--on {
-  //   background-color: $black-color;
-  // }
+  .button-dark-mode--off {
+    background-color: $button-bg-color;
+  }
+  .button-dark-mode--on {
+    background-color: $black-color;
+  }
 }
 
 ////////////
