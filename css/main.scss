@@ -271,13 +271,13 @@ ul {
   background-color: $dark-blue-color;
 }
 
-.input--darkmode {
+form .input--darkmode {
   background-color: $white-color;
-  color: $dark-color;
+  color: $black-color;
 }
 
-.button--darkmode {
+form .button--darkmode {
   background-color: $white-color;
-  color: $dark-color;
+  color: $black-color;
 }
 

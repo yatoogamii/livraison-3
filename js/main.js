@@ -8,6 +8,9 @@
 let button = document.getElementsByClassName("form__button")[0];
 let input = document.getElementById('add-item');
 let ul = document.getElementsByClassName('TODO-list')[0];
+let body = document.getElementsByTagName('body')[0];
+let header = document.getElementsByTagName('header')[0];
+let footer = document.getElementsByTagName('footer')[0];
 let divDarkModeOn = document.getElementsByClassName('button-dark-mode--on')[0];
 let divDarkModeOff = document.getElementsByClassName('button-dark-mode--off')[0];
 let inputValue = '';
@@ -101,9 +104,21 @@ input.onkeypress = function(event) {
 divDarkModeOn.onclick = function () {
   divDarkModeOn.style.backgroundColor = "#4c4c4c";
   divDarkModeOff.style.backgroundColor = "#454545";
+
+  body.classList.add('body--darkmode');
+  header.classList.add('header--darkmode');
+  footer.classList.add('footer--darkmode');
+  input.classList.add('input--darkmode');
+  button.classList.add('button--darkmode');
 };
 
 divDarkModeOff.onclick = function() {
   divDarkModeOff.style.backgroundColor = "#4c4c4c";
   divDarkModeOn.style.backgroundColor = "#454545";
+
+  body.classList.remove('body--darkmode');
+  header.classList.remove('header--darkmode');
+  footer.classList.remove('footer--darkmode');
+  input.classList.remove('input--darkmode');
+  button.classList.remove('button--darkmode');
 };
