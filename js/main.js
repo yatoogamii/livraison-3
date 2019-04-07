@@ -8,6 +8,8 @@
 let button = document.getElementsByClassName("form__button")[0];
 let input = document.getElementById('add-item');
 let ul = document.getElementsByClassName('TODO-list')[0];
+let divDarkModeOn = document.getElementsByClassName('button-dark-mode--on')[0];
+let divDarkModeOff = document.getElementsByClassName('button-dark-mode--off')[0];
 let inputValue = '';
 let spans;
 
@@ -67,6 +69,14 @@ function checkIfItemAlreadyExist() {
   return (arrSpans.includes(valueCapitalize())) ? true : false;
 }
 
+function darkModeOn() {
+  
+}
+
+function darkModeOff() {
+  
+}
+
 /////////////
 //  Event  //
 /////////////
@@ -86,5 +96,14 @@ input.onkeypress = function(event) {
     removeItem();
   }
   return;
-}
+};
 
+divDarkModeOn.onclick = function () {
+  divDarkModeOn.style.backgroundColor = "#4c4c4c";
+  divDarkModeOff.style.backgroundColor = "#454545";
+};
+
+divDarkModeOff.onclick = function() {
+  divDarkModeOff.style.backgroundColor = "#4c4c4c";
+  divDarkModeOn.style.backgroundColor = "#454545";
+};
