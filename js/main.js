@@ -5,7 +5,7 @@
 ///////////////////////
 
 
-let button = document.getElementsByClassName("button")[0];
+let button = document.getElementsByClassName("form__button")[0];
 let input = document.getElementById('add-item');
 let ul = document.getElementsByClassName('TODO-list')[0];
 let inputValue = '';
@@ -25,7 +25,7 @@ function addLiInList() {
       input.value = '';
     }
     else {
-      ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${valueCapitalize()}</span><input type="number" value="1" class="form__input-number"</li>`);
+      ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${valueCapitalize()}</span><input type="number" value="1" class="ul__input-number"</li>`);
       input.value = '';
       ulScrollAuto();
     }
@@ -40,7 +40,7 @@ function crossedLi() {
   spans = document.getElementsByTagName("span");
   for (let span of spans) {
     span.onclick = function() {
-      span.classList.toggle('crossed')
+      span.classList.toggle('li__span--crossed')
     }
   }
 }
