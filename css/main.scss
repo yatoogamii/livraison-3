@@ -188,18 +188,24 @@ ul {
 //  footer  //
 //////////////
 
-footer {
-  .fa-github-square {
-    font-size: 10rem;
+  a {
+    color: $white-color;
+
+    .fa-github-square {
+      font-size: 10rem;
+    }
+
+    .fa-twitter-square {
+      font-size: 10rem;
+    }
+
+    .fa-linkedin {
+      font-size: 10rem;
+    }
   }
 
-  .fa-twitter-square {
-    font-size: 10rem;
-    margin: 0 5rem 0 5rem;
-  }
-
-  .fa-linkedin {
-    font-size: 10rem;
+  .footer__link-twitter {
+      margin: 0 5rem 0 5rem;
   }
 
   .footer__p {
@@ -209,4 +215,5 @@ footer {
     padding: 1rem;
     width: 100%;
   }
-}
+
+  

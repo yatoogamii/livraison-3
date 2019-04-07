@@ -138,17 +138,24 @@ ul li input {
   margin: 1rem;
 }
 
-footer .fa-github-square {
+a {
+  color: #fff8f0;
+}
+a .fa-github-square {
   font-size: 10rem;
 }
-footer .fa-twitter-square {
+a .fa-twitter-square {
   font-size: 10rem;
+}
+a .fa-linkedin {
+  font-size: 10rem;
+}
+
+.footer__link-twitter {
   margin: 0 5rem 0 5rem;
 }
-footer .fa-linkedin {
-  font-size: 10rem;
-}
-footer .footer__p {
+
+.footer__p {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
