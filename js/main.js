@@ -13,13 +13,16 @@ let header = document.getElementsByTagName('header')[0];
 let footer = document.getElementsByTagName('footer')[0];
 let divDarkModeOn = document.getElementsByClassName('button-dark-mode--on')[0];
 let divDarkModeOff = document.getElementsByClassName('button-dark-mode--off')[0];
-let count = "";
+let count = [];
 let inputValue = '';
 let spans;
 
 /////////////////
 //  functions  //
 /////////////////
+function getAllInput() {
+  return document.getElementsByTagName('input');
+}
 
 function getInputValue() {
   inputValue = input.value;
@@ -31,9 +34,9 @@ function addLiInList() {
       input.value = '';
     }
     else {
-      ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${valueCapitalize()}</span><input type="number" value="1" class="ul__input-number"</li>`);
+      ul.insertAdjacentHTML('beforeEnd', `<li><i class="far fa-times-circle"></i><span>${valueCapitalize()}</span><input type="number" value="1" class="ul__input-number ${(window.getComputedStyle(body).backgroundColor == "rgb(255, 248, 240)") ? "oui" : "input--darkmode" }"</li>`);
       input.value = '';
-      count = document.getElementsByTagName('input')[1];
+      count.push(getAllInput()[getAllInput().length -1]);
       ulScrollAuto();
     }
   }
@@ -112,7 +115,10 @@ divDarkModeOn.onclick = function () {
   footer.classList.add('footer--darkmode');
   input.classList.add('input--darkmode');
   button.classList.add('button--darkmode');
-  count.classList.add('input--darkmode');
+
+  for (let item of count) {
+  item.classList.add('input--darkmode');
+  }
 };
 
 divDarkModeOff.onclick = function() {
@@ -124,5 +130,8 @@ divDarkModeOff.onclick = function() {
   footer.classList.remove('footer--darkmode');
   input.classList.remove('input--darkmode');
   button.classList.remove('button--darkmode');
-  count.classList.remove('input--darkmode');
+
+  for (let item of count) {
+  item.classList.remove('input--darkmode');
+  }
 };
