@@ -21,6 +21,7 @@ $white-color: #fff8f0;
 $dark-blue-color: #2e3b4a;
 $blue-color: #3b4c5f;
 $light-blue-color: #485c73;
+$button-bg-color: #4c4c4c;
 
 ////////////////////////////////////////////////////////////////////////
 //                                base                                //
@@ -35,6 +36,9 @@ html {
 }
 
 h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
   text-align: center;
   font-size: 4rem;
   color: $white-color;
@@ -66,7 +70,6 @@ header {
   height: 8vh;
   min-height: 8rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: $light-blue-color;
 }
@@ -92,6 +95,41 @@ footer {
 ////////////////////////////////////////////////////////////////////////
 //                             components                             //
 ////////////////////////////////////////////////////////////////////////
+
+////////////////////////
+//  button dark mode  //
+////////////////////////
+
+.header__button-dark-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 4rem;
+  position: absolute;
+  right: 2vh;
+  color: $white-color;
+  cursor: default;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+  .button-dark-mode--off {
+    background-color: $button-bg-color;
+  }
+  .button-dark-mode--on {
+    background-color: $black-color;
+  }
+}
 
 ////////////
 //  form  //
